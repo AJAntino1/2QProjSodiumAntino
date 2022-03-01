@@ -1,118 +1,87 @@
-body 
-{
-    text-align: center;
+
+body {
     background-color: white;
     margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: #F1F1F1; }
-::-webkit-scrollbar-thumb { background: #888; }
-::-webkit-scrollbar-thumb:hover { background: #555; }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 10000;
+    box-sizing: border-box;
+}
 
-a {
-    color: black;
+header img {
+    position: relative;
+    right: 70px;
+}
+
+header.sticky {
+    padding: 10px 100px;
+    background: #34495e;
+    box-sizing: border-box;
+    border: 2px black solid;
+}
+
+header a.logo {
+    position: relative;
+    font-weight: 700;
+    color: #fff;
     text-decoration: none;
-    cursor: pointer;
+    font-size: 1.25em;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    right: 65px;
+}
+    
+header ul{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+header ul li {
+    position: relative;
+    list-style: none;
+}
+    
+header ul li a {
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+header ul li a:hover {
+    background-color: #1abc9c;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-image: url(../Images/coronavirus.png);
+    background-size: cover;
 }
 
 h1 {
     margin: 0;
-}
-
-.title {
-    font-size: 20px;
-    border: 2px solid black;
-    background-color: orange;
-    padding: 10px;
-    color:white;
-    font-family: sans-serif;
-    position: relative;
-}
-
-.title img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 5vw; 
-    height: auto;
-}
-
-.title h1 {
-    font-size: 3vw;
-}
-
-.box1 {
-    font-size: 40px;
-    box-sizing: border-box;
-    border: 2px solid black;
-    border-bottom: 2px solid white;
-    padding: 20px 20px 40px 20px;
-    color: black;
-    position: absolute;
-    bottom: 0;
-    left: 20px;
-    background-color: white;
-    margin-bottom: -2px;
-}
-
-.box2 {
-    font-size: 40px;
-    box-sizing: border-box;
-    border: 2px solid black;
-    background-color: powderblue;
-    border-bottom: none;
-    padding: 20px 20px 60px 20px;
-    color: black;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin-bottom: -2px;
-}
-
-.learn-more {
-    overflow: auto;
-    font-size: 20px;
-    box-sizing: border-box;
-    border: 2px solid black;
-    padding: 4px 4px 8px 4px;
-    color: black;
-    position: absolute;
-    bottom: 0;
-    right: 490px;
-    background-color: coral;
-    margin-bottom: 10px;
-}
-
-.learn-more:hover {
-    background-color: rgb(170, 117, 67);
-    color: white;
-}
-
-.hero-image {
-    width: 100%;
-    height: 400px;
-    background-image: url("../Images/coronavirus.png");
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-}
-
-.global-header {
-    border: 2px solid black;
-    font-size: 0;
-}
-
-.global-header a {
-    display: inline-block;
-    width: 20%;
-    font-size: initial;
-    box-sizing: border-box;
-    padding: 15px;
-}
-
-.global-header a:hover {
-    background-color: orange;
 }
 
 main {
@@ -132,13 +101,14 @@ main {
     align-self: center;
 }
 
-.intro-section {
+.intro-article {
     padding-top: 30px;
     padding-bottom: 30px;
+    padding-left: 100px;
     width: 50%;
 }
 
-.tab2-section {
+.tab2-article {
     margin: auto;
     width: 50%;
     padding-top: 30px;
@@ -146,12 +116,32 @@ main {
     align-items: center;
 }
 
+.news {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+aside img {
+    padding: 30px 0 30px 0;
+}
+
+.variants {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 30px 0 30px 0;
+}
+
 footer {
     box-sizing: border-box;
     border: 2px solid black;
     border-top: none;
-    background-color:orange;
+    background-color: #34495e;
     color: white;
+    text-align: center;
 }
 
 .footer-top {
@@ -164,6 +154,7 @@ footer {
 }
 
 .fb-link {
+    text-align: center;
     text-decoration: underline;
 }
 
@@ -176,30 +167,24 @@ footer {
     width: 25%;
 }
 
-.banner-image {
-    background-image: url(../Images/Lab.jpg);
-    width: 100%;
-    height: 400px;
-    background-size: cover;
-    position: relative;
-    border-bottom: 2px solid black;
-}
-
-.not-done {
-    box-sizing: border-box;
-    border: 2px solid black;
-    border-top: 2px solid white;
-    font-size: 50px;
-}
-
 .references a {
+    text-align: center;
     color: white;
     text-decoration: underline;
 
 }
 
-.socials a {
+.socials p a {
+    text-align: center;
     color: white;
+    position: relative;
+    bottom: 25px;
+}
+
+.socials img {
+    position: relative;
+    right: 10px;
+    top: 15px;
 }
 
 @media screen and (max-width: 600px) {
